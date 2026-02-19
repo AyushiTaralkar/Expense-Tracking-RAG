@@ -13,4 +13,7 @@ langchainhub
 langchain-text-splitters
 tiktoken
 pandas
+langchain_huggingface
+langchain.prompts
 langchain-google-genai
+
