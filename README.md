@@ -219,7 +219,7 @@ Add screenshots of:
 **Ayushi Taralkar**
 
 B.Tech Computer Science Engineering
-VIT Bhopal University
+VELLORE INSTITUTE OF TECHNOLOGY 
 
 ---
 
