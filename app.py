@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from rag.rag_advisor import get_financial_advice
 
 # ---------------- PAGE CONFIG ----------------
 
@@ -304,47 +305,10 @@ if st.button("✨ Generate Advice"):
 
         with st.spinner("Analyzing your expenses..."):
 
-            category_summary = (
-                df.groupby("Category")["Amount"]
-                .sum()
-                .sort_values(ascending=False)
-            )
+           response = get_financial_advice( question,df)
 
-            highest = category_summary.index[0]
-            highest_amount = category_summary.iloc[0]
-
-            advice = f"""
-### 📊 Financial Summary
-
-- **Total Spending:** ₹{total:,.0f}
-- **Average Expense:** ₹{average:,.0f}
-- **Transactions:** {transactions}
-- **Highest Spending Category:** {highest} (₹{highest_amount:,.0f})
-
-### 💡 Suggestions
-
-✅ Reduce spending in **{highest}** if possible.
-
-✅ Follow the **50-30-20 Rule**
-- 50% Needs
-- 30% Wants
-- 20% Savings
-
-✅ Track recurring expenses every month.
-
-✅ Set category-wise budgets.
-
-
-"""
-
-            st.success("Analysis Complete!")
-
-            st.markdown(advice)
-
-    else:
-
-        st.warning("Please enter a question.")
-
+    st.success("Analysis Complete!")
+    st.markdown(response)
 
 # ---------------- DATASET ----------------
 
