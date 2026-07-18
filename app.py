@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
+import plotly as px
 from rag.rag_advisor import get_financial_advice
 
 # ---------------- PAGE CONFIG ----------------
