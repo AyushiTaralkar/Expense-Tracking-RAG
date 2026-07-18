@@ -115,7 +115,7 @@ Upload a CSV with the following structure:
 Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/Expense-Tracking-RAG.git
+git clone https://github.com/AyushiTaralkar/Expense-Tracking-RAG/Expense-Tracking-RAG.git
 
 cd Expense-Tracking-RAG
 ```
@@ -201,7 +201,7 @@ Planned enhancements:
 ## 📸 Screenshots
 
 Add screenshots of:
-
+![alt text](image.png)
 * Home Dashboard
 * Analytics Section
 * AI Advisor
@@ -216,10 +216,6 @@ Add screenshots of:
 
 B.Tech Computer Science Engineering
 VIT Bhopal University
-
-GitHub: https://github.com/<your-github-username>
-
-LinkedIn: https://www.linkedin.com/in/<your-linkedin-profile>
 
 ---
 
