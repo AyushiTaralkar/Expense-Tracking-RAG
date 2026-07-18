@@ -1,13 +1,18 @@
 [project]
 name = "ytrag"
 version = "0.1.0"
-description = "Add your description here"
+description = "AI Powered Personal Finance Copilot"
 readme = "README.md"
 requires-python = ">=3.11"
+
 dependencies = [
+    "streamlit>=1.46.0",
+    "plotly>=6.0.0",
+    "pandas>=2.2.3",
+    "numpy>=2.3.0",
+
     "chromadb>=1.4.1",
     "faiss-cpu>=1.13.2",
-    "ipykernel>=7.1.0",
     "langchain>=1.2.7",
     "langchain-community>=0.4.1",
     "langchain-core>=1.2.7",
@@ -17,12 +22,8 @@ dependencies = [
     "langchain-text-splitters>=1.1.0",
     "langchainhub>=0.1.21",
     "langgraph>=1.0.7",
-    "matplotlib>=3.10.8",
-    "numpy>=2.4.1",
-    "pandas>=3.0.0",
     "pymupdf>=1.26.7",
     "pypdf>=6.6.2",
-    "scikit-learn>=1.8.0",
     "sentence-transformers>=5.2.2",
     "tiktoken>=0.12.0",
 ]
