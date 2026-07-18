@@ -204,9 +204,13 @@ Add screenshots of:
 ![alt text](image.png)
 * Home Dashboard
 * Analytics Section
+![alt text](image-1.png)
 * AI Advisor
+![alt text](image-3.png)
 * CSV Upload
+![alt text](image-4.png)
 * Monthly Trend
+![alt text](image-2.png)
 
 ---
 
