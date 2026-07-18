@@ -17,3 +17,6 @@ langchain_huggingface
 langchain.prompts
 langchain-google-genai
 
+streamlit
+pandas
+plotly
