@@ -2,14 +2,3 @@ streamlit==1.46.1
 plotly==6.2.0
 pandas==2.2.3
 numpy==2.3.0
-
-faiss-cpu
-
-langchain
-langchain-community
-langchain-google-genai
-langchain-huggingface
-
-sentence-transformers
-pymupdf
-pypdf
