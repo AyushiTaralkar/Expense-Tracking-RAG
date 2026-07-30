@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from rag.rag_advisor import get_financial_advice
+
 
 # ---------------- PAGE CONFIG ----------------
 
@@ -271,45 +271,85 @@ if "Date" in df.columns:
 st.divider()
 # ---------------- AI ADVISOR ----------------
 
+st.divider()
+
 st.subheader("🤖 ArthaSage AI Advisor")
 
-st.markdown(
-"""
+st.markdown("""
 <div class="card">
 
 <h3 style="color:white;">
-Ask anything about your finances
+AI Financial Assistant
 </h3>
 
 <p style="color:#CBD5E1;">
-Examples:
-• How can I reduce my expenses?
-• Which category has the highest spending?
-• Am I overspending?
-• Suggest a monthly budget.
+The public demo showcases the interface and financial dashboard.
+
+The full version uses:
+• LangChain
+• FAISS Vector Database
+• Google Gemini
+• Retrieval-Augmented Generation (RAG)
+
+to provide personalized financial recommendations.
 </p>
 
 </div>
-""",
-unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
 question = st.text_area(
-    "Your Question",
-    placeholder="Example: Give me tips to reduce my food expenses..."
+    "Ask a financial question",
+    placeholder="Example: How can I reduce my monthly expenses?"
 )
 
 if st.button("✨ Generate Advice"):
 
-    if question.strip():
+    if not question.strip():
+        st.warning("Please enter a question.")
 
-        with st.spinner("Analyzing your expenses..."):
+    else:
 
-           response = get_financial_advice( question,df)
+        total_spending = df["Amount"].sum()
+        avg_spending = df["Amount"].mean()
+        top_category = (
+            df.groupby("Category")["Amount"]
+            .sum()
+            .idxmax()
+        )
 
-    st.success("Analysis Complete!")
-    st.markdown(response)
+        advice = f"""
+### 💡 Demo Financial Insights
 
+**Your Question**
+
+> {question}
+
+### Quick Analysis
+
+- Total Spending: ₹{total_spending:,.2f}
+- Average Expense: ₹{avg_spending:,.2f}
+- Highest Spending Category: **{top_category}**
+
+### Recommendations
+
+• Review your spending in **{top_category}**, as it represents your largest expense category.
+
+• Set a monthly budget and track your expenses regularly.
+
+• Aim to save at least **20%** of your monthly income.
+
+• Consider reducing unnecessary subscriptions and impulse purchases.
+
+---
+
+⚡ **Note:** This is a lightweight public demo.
+
+The complete version integrates **LangChain + FAISS + Google Gemini** to generate personalized AI-powered financial advice based on your uploaded transaction history.
+"""
+
+        st.success("Analysis Complete!")
+
+        st.markdown(advice)
 # ---------------- DATASET ----------------
 
 st.divider()
