@@ -318,7 +318,7 @@ st.subheader("📂 Transaction History")
 
 st.dataframe(
     df,
-    width="stretch"
+    use_container_width=True
 )
 
 # ---------------- DOWNLOAD CSV ----------------
