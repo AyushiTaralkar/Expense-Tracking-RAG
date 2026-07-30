@@ -40,7 +40,7 @@ text-align:center;
 
 .metric-title{
 font-size:15px;
-color:#B0B8C5;
+color:#B0B8C9;
 }
 
 .metric-value{
