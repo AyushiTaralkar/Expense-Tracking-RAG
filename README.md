@@ -199,16 +199,18 @@ Planned enhancements:
 ---
 
 ## 📸 Screenshots
+* CSV Upload
+![alt text](image-4.png)
 
-Add screenshots of:
+<img width="1496" height="450" alt="image" src="https://github.com/user-attachments/assets/7a6b5415-96b5-4b7f-94ba-f10e3e94fe9c" />
+
 ![alt text](image.png)
 * Home Dashboard
 * Analytics Section
 ![alt text](image-1.png)
 * AI Advisor
 ![alt text](image-3.png)
-* CSV Upload
-![alt text](image-4.png)
+
 * Monthly Trend
 ![alt text](image-2.png)
 
